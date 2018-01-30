@@ -33,6 +33,11 @@ class VennDiagram extends Component {
         console.log(JSON.stringify(this.props));
 
         var sets = mapTermsToSets(this.props.terms || []);
+	console.log(sets);
+	if (!sets || sets.length === 0) {
+	  // TODO The Venn diagram layout code does not like  empty sets!
+          return;
+	}
                     
         var chart = venn.VennDiagram();
         d3.select(this.node)
