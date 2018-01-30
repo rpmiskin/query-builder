@@ -22,11 +22,16 @@
   font-size: large;
 }
 
+div.body {
+    display: flex;
+}
+
 div.controls {
 	border-width: 1px;
 	border-style: solid;
 	float: left;
 	height:100%;
+    flex-grow: 3;
 }
 div.controls div.list {
 	padding: 0px 0px;
@@ -35,16 +40,13 @@ div.controls div.list div.list-heading {
 	vertical-align:top;
 	text-align:top;
 	height: 3rem;
-	width: 400px;
 	margin-top: 0px;
+	margin-bottom: 10px;
 	padding-top: 0px;
+    display: flex;
 }
 div.controls div.list div.list-heading div.title {
-	float: left;
 	padding-left: 16px;
-}
-div.diagram {
-	float: right;
 }
 
 @keyframes App-logo-spin {

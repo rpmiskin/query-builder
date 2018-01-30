@@ -41,6 +41,7 @@ class App extends Component {
                               // clicked on item
                               const newTerms = [...this.state.terms];
                               newTerms.splice(index, 1);
+			      console.log(newTerms);
                               this.setState({terms:newTerms});
                           } }
                       >
@@ -55,7 +56,7 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <AppBar title="Query Builder"/>
-          <div style={{display: 'inline-block'}}>
+          <div className='body'>
             <div className='controls'>
               <List className='list'>
                 <div className='list-heading'>
