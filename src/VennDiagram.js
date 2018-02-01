@@ -50,16 +50,21 @@ class VennDiagram extends Component {
 	  // TODO The Venn diagram layout code does not like  empty sets!
           return;
 	}
-                    
-        var chart = venn.VennDiagram();
+        if (!this.chart){
+          this.chart = venn.VennDiagram();
+        }
         d3.select(this.node)
             .datum(sets)
-            .call(chart);
+            .call(this.chart);
 
-        d3.select(this.node).selectAll('.venn-circle path').style('fill-opacity', 0.4).style('stroke-width', 4).style('stroke', 'black');
-        d3.select(this.node).selectAll('text').style('fill', 'white');
-    d3.select(this.node).selectAll('.venn-area').on('mouseover', (d,i)=>console.log(`${JSON.stringify(d)} - ${JSON.stringify(i)}`));
-    d3.select(this.node).selectAll('.venn-area').on('click', (d,i)=>console.log(`${JSON.stringify(d)} - ${JSON.stringify(i)}`));
+//        d3.select(this.node).selectAll('.venn-circle path').style('fill-opacity', 0.4).style('stroke-width', 4).style('stroke', 'black');
+ //       d3.select(this.node).selectAll('text').style('fill', 'white');
+ //   d3.select(this.node).selectAll('.venn-area').on('mouseover', (d,i)=>console.log(`${JSON.stringify(d)} - ${JSON.stringify(i)}`));
+ //   d3.select(this.node).selectAll('.venn-area').on('click', (d,i)=>console.log(`${JSON.stringify(d)} - ${JSON.stringify(i)}`));
+
+        d3.select(this.node)
+          .selectAll('g path')
+          .on('mouseup', function(d, i) {console.log(JSON.stringify(d));});
     }
 
     render() {
