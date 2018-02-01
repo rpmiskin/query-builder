@@ -23,33 +23,37 @@
 }
 
 div.body {
-    display: flex;
+  display: flex;
 }
 
 div.controls {
-	border-width: 1px;
-	border-style: solid;
-	float: left;
-	height:100%;
-    flex-grow: 3;
+  border-width: 1px;
+  border-style: solid;
+  float: left;
+  height: 100%;
+  flex-grow: 3;
 }
 div.controls div.list {
-	padding: 0px 0px;
+  padding: 0px 0px;
 }
 div.controls div.list div.list-heading {
-	vertical-align:top;
-	text-align:top;
-	height: 3rem;
-	margin-top: 0px;
-	margin-bottom: 10px;
-	padding-top: 0px;
-    display: flex;
+  vertical-align: top;
+  text-align: top;
+  height: 3rem;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 0px;
+  display: flex;
 }
 div.controls div.list div.list-heading div.title {
-	padding-left: 16px;
+  padding-left: 16px;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
